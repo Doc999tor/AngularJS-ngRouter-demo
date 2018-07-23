@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<base href="/">
+	<style>
+		nav a {display: block;}
+	</style>
+</head>
+<body ng-app="app">
+	<header ng-controller="HeaderCtrl">
+		<nav>
+			<a href="/users">User list</a>
+		</nav>
+	</header>
+	<main ng-view></main>
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="node_modules/angular-route/angular-route.min.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
