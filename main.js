@@ -6,12 +6,12 @@ app.controller('HeaderCtrl', HeaderCtrl)
 app.factory('UsersService', UsersService)
 app.config(function ($routeProvider, $locationProvider) {
 	$routeProvider
-	.when('/', {
+	.when('./', {
 		template: `
 			<h1>Choose a user</h1>
 		`,
 	})
-	.when('/users', {
+	.when('./users', {
 		template: `
 			<ul>
 				<li ng-repeat="user in users">
@@ -21,7 +21,7 @@ app.config(function ($routeProvider, $locationProvider) {
 		`,
 		controller: "UsersList",
 	})
-	.when('/users/:userId', {
+	.when('./users/:userId', {
 		template: `
 			<h1>{{title}}</h1>
 			<p>{{user.name}}</p>
